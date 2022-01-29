@@ -8,6 +8,7 @@ TagManager:
   - Platform
   - LineSpawner
   - LineDeleter
+  - LightFella
   layers:
   - Default
   - TransparentFX
