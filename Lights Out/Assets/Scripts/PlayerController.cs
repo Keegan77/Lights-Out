@@ -25,8 +25,6 @@ public class PlayerController : MonoBehaviour
     public float fallMultiplier;
     public float lowJumpMultiplier;
 
-    private float ylimit = 5.5f;
-    private float xlimit = 9.5f;
     public float maxYVelocity = -50;
 
     public bool isMoving;
@@ -53,7 +51,6 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        Debug.Log(isMoving);
         if (moveInput != 0)
         {
             isMoving = true;
@@ -74,22 +71,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, maxYVelocity);
         }
-        if (transform.position.y < -ylimit)
-        {
-            transform.position = new Vector3(transform.position.x, ylimit, transform.position.z);
-        }
-        if (transform.position.y > ylimit)
-        {
-            transform.position = new Vector3(transform.position.x, -ylimit, transform.position.z);
-        }
-        if (transform.position.x > xlimit)
-        {
-            transform.position = new Vector3(-xlimit, transform.position.y, transform.position.z);
-        }
-        else if (transform.position.x < -xlimit)
-        {
-            transform.position = new Vector3(xlimit, transform.position.y, transform.position.z);
-        }
+
 
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
