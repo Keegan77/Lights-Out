@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     [Header("Layer Mask")]
     private bool isGrounded;
     public Transform feetPos;
-    public Transform headPos;
     public float checkRadius;
     public LayerMask whatIsGround;
 
@@ -31,9 +30,6 @@ public class PlayerController : MonoBehaviour
     public float maxYVelocity = -50;
 
     Animator animator;
-    GameObject GameManagerObj;
-    public GameObject Fireball;
-    public GameObject FireballLeft;
 
     //Gets Rigidbody component
 
@@ -45,7 +41,6 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        GameManagerObj = GameObject.FindGameObjectWithTag("gamemanager");
 
     }
 
