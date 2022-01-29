@@ -29,7 +29,10 @@ public class PlayerController : MonoBehaviour
     private float xlimit = 9.5f;
     public float maxYVelocity = -50;
 
+    public bool isMoving;
     Animator animator;
+    GameObject GameManagerObj;
+    GameManager gameManager;
 
     //Gets Rigidbody component
 
@@ -40,8 +43,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-
+        GameManagerObj = GameObject.FindGameObjectWithTag("gamemanager");
+        gameManager = GameManagerObj.GetComponent<GameManager>();
     }
 
     //Moves player on x axis
@@ -50,6 +53,12 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        Debug.Log(isMoving);
+        if (moveInput != 0)
+        {
+            isMoving = true;
+        }
+        else isMoving = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -86,11 +95,11 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(1.248608f, 1.249893f, 1.248608f);
         }
         else if (moveInput < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-1.248608f, 1.248608f, 1.248608f);
         }
 
         //cool jump fall
@@ -136,6 +145,6 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-
+        animator.SetBool("Moving", isMoving);
     }
 }
