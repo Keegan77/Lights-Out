@@ -31,6 +31,10 @@ public class DontDestroyMusic : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
 
     }
 }

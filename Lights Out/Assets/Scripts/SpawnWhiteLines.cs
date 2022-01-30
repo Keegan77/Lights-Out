@@ -8,12 +8,13 @@ public class SpawnWhiteLines : MonoBehaviour
     float startTimer = .5f;
     float timer;
     public bool justSwitched;
+    public float numOfLines;
     GameObject GameManagerObj;
     GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < numOfLines; i++)
         {
             Instantiate(dottedLine, new Vector3(transform.position.x - .49f * i, transform.position.y, transform.position.z), transform.rotation);
         } // putting this here so you get continuous line movement even when you first start the level
@@ -27,7 +28,7 @@ public class SpawnWhiteLines : MonoBehaviour
     {
         if (justSwitched)
         {
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < numOfLines; i++)
             {
                 Instantiate(dottedLine, new Vector3(transform.position.x - .49f * i, transform.position.y, transform.position.z), transform.rotation);
             }
