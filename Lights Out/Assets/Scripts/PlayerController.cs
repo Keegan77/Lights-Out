@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpForce;
     private float moveInput;
+    public Vector3 lightFellaTransport;
 
     [Header("Layer Mask")]
     private bool isGrounded;
@@ -76,7 +77,7 @@ public class PlayerController : MonoBehaviour
         }
         if (other.CompareTag("MoveLightFella"))
         {
-            LightFella.transform.position = new Vector3(17.68f, 1.44f, 0);
+            LightFella.transform.position = lightFellaTransport;
         }
     }
 

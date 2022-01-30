@@ -5415,6 +5415,14 @@ PrefabInstance:
       propertyPath: checkRadius
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 4998301435857071171, guid: a22116084709c024a98b4eed6a087468, type: 3}
+      propertyPath: lightFellaTransport.x
+      value: 17.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998301435857071171, guid: a22116084709c024a98b4eed6a087468, type: 3}
+      propertyPath: lightFellaTransport.y
+      value: 1.44
+      objectReference: {fileID: 0}
     - target: {fileID: 4998301435857071293, guid: a22116084709c024a98b4eed6a087468, type: 3}
       propertyPath: m_RootOrder
       value: 5
