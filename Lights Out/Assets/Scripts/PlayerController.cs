@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour
         {
             LightFella.transform.position = lightFellaTransport;
         }
+
     }
 
     void Update()

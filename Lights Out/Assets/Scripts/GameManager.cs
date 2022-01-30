@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
     float startDeathTime = 1f;
     float deathTimer;
 
-    private float timeStart = 5;
-    private float timer = 5;
+    public float timeStart = 5;
+    private float timer;
     private float startAnim = 1.667f; // this is the time that the lightfella anim has to begin in order for the animation to end right when the scene changes from light to dark // vice versa
     private float endPreAnim = 3.33f; // value that the pre idle anim should end
     public bool colorIsWhite = true;
@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     {
         playerDied = false;
         deathTimer = startDeathTime;
+        timer = timeStart;
         Camera = GameObject.FindGameObjectWithTag("MainCamera");
         Background = Camera.GetComponent<Camera>();
         LineSpawner = FindObjectsOfType<SpawnLines>();
