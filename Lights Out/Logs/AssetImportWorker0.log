@@ -2104,3 +2104,28 @@ Received Import Request.
 Start importing Assets/Scenes/Level1.unity using Guid(12ee69e5145dac04091bb68615af81eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb87130a9c9e134907b7b18163259ae0') in 0.016337 seconds 
   Import took 0.022046 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 191.842075 seconds.
+  path: Assets/Music and SFX
+  artifactKey: Guid(a3c2eeb74499c3742bdfeaa89a30bc8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music and SFX using Guid(a3c2eeb74499c3742bdfeaa89a30bc8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a070f048e884700120dac1d892ea127') in 0.009946 seconds 
+  Import took 0.014111 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.402686 seconds.
+  path: Assets/tobeconntinue.controller
+  artifactKey: Guid(57698d62d3224d3498a6b736b39cd234) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tobeconntinue.controller using Guid(57698d62d3224d3498a6b736b39cd234) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d423e31554bf126f57d1614de006078') in 0.010806 seconds 
+  Import took 0.016687 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.821552 seconds.
+  path: Assets/littlefellafinale.anim
+  artifactKey: Guid(d079eafdc3a2e5d498ca3281c74c9ccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/littlefellafinale.anim using Guid(d079eafdc3a2e5d498ca3281c74c9ccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36ddebdde9cba30b30ba0d6041da2f0e') in 0.010443 seconds 
+  Import took 0.015847 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
