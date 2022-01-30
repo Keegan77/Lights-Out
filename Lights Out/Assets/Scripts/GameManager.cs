@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     float startDeathTime = 1f;
     float deathTimer;
 
+    public AudioSource lightSwitchSound;
+
     public float timeStart = 5;
     private float timer;
     private float startAnim = 1.667f; // this is the time that the lightfella anim has to begin in order for the animation to end right when the scene changes from light to dark // vice versa
@@ -49,7 +51,11 @@ public class GameManager : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         LightFella = GameObject.FindGameObjectWithTag("LightFella");
         playerAnimator = Player.GetComponent<Animator>();
-        fellaAnimator = LightFella.GetComponent<Animator>();
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByBuildIndex(7))
+        {
+            fellaAnimator = LightFella.GetComponent<Animator>();
+        }
+        
     }
 
     // Update is called once per frame
@@ -64,7 +70,6 @@ public class GameManager : MonoBehaviour
             }
             
         }
-
         colorIsWhiteCopy = colorIsWhite;
         timer = timer - Time.deltaTime;
         //Debug.Log(timer);
@@ -77,6 +82,7 @@ public class GameManager : MonoBehaviour
         }
         if (timerSwitch == true)
         {
+            lightSwitchSound.Play();
             if (colorIsWhite)
             {
                 Background.backgroundColor = colorBlack;
@@ -113,9 +119,16 @@ public class GameManager : MonoBehaviour
         {
             lightFellaAnim = true;
         }
-        playerAnimator.SetBool("colorIsWhite", colorIsWhite);
-        fellaAnimator.SetBool("StartAnim", lightFellaAnim);
-        fellaAnimator.SetBool("colorIsLight", colorIsWhiteCopy);
-        fellaAnimator.SetBool("endPreAnim", endPreLightFellaAnim);
+        if (playerAnimator != null)
+        {
+            playerAnimator.SetBool("colorIsWhite", colorIsWhite);
+        }
+        if (fellaAnimator != null)
+        {
+            fellaAnimator.SetBool("StartAnim", lightFellaAnim);
+            fellaAnimator.SetBool("colorIsLight", colorIsWhiteCopy);
+            fellaAnimator.SetBool("endPreAnim", endPreLightFellaAnim);
+        }
+
     }
 }

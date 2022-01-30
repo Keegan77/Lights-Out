@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DontDestroyMusic : MonoBehaviour
 {
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -30,5 +31,6 @@ public class DontDestroyMusic : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
 }

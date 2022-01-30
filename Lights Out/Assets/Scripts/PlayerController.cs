@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     private float moveInput;
     public Vector3 lightFellaTransport;
+    public AudioSource jump;
+    public AudioSource diedSound;
 
     [Header("Layer Mask")]
     private bool isGrounded;
@@ -73,6 +75,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("DeathPlane") || other.CompareTag("Spikes"))
         {
             gameManager.playerDied = true;
+            diedSound.Play();
             Destroy(gameObject);
         }
         if (other.CompareTag("MoveLightFella"))
@@ -128,6 +131,8 @@ public class PlayerController : MonoBehaviour
         if (isGrounded == true && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Z)) && isJumping == false)
         {
             isJumping = true;
+            /////////////////////////////////////////////////////////
+            jump.Play();
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
         }

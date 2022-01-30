@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
     public Animator menuAnimator;
     public Animator textAnimator;
     public Animator enterToStart;
+    public AudioSource switchSound;
     public Text pressS;
     float animTime = 2.0f;
     float timer;
@@ -26,6 +27,7 @@ public class MenuManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             lightPressed = true;
+            switchSound.Play();
             timer = animTime;
         }
         if (lightPressed)

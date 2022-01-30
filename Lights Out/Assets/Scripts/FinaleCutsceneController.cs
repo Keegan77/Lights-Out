@@ -41,6 +41,7 @@ public class FinaleCutsceneController : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
+
         }
         
         cutsceneAnimator.SetBool("littleFellaDeath", littleFellaDeath);
