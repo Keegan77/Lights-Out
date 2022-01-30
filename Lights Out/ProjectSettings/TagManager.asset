@@ -15,6 +15,7 @@ TagManager:
   - Spikes
   - MoveLightFella
   - playerFinale
+  - Music
   layers:
   - Default
   - TransparentFX

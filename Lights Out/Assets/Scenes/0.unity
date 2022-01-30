@@ -2051,6 +2051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57421c985a3c814fa1c1203f7378bea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeStart: 5
   colorIsWhite: 1
   colorIsWhiteCopy: 0
   timerSwitch: 0
@@ -5482,11 +5483,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5038730032274399537, guid: b632f6570d771a847b960c4c384b824c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.98
+      value: 23.72
       objectReference: {fileID: 0}
     - target: {fileID: 5038730032274399537, guid: b632f6570d771a847b960c4c384b824c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.33
+      value: -2.42
       objectReference: {fileID: 0}
     - target: {fileID: 5038730032274399537, guid: b632f6570d771a847b960c4c384b824c, type: 3}
       propertyPath: m_LocalPosition.z
