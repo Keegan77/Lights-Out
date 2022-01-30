@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     GameObject GameManagerObj;
     GameManager gameManager;
+    GameObject LightFella;
 
     //Gets Rigidbody component
 
@@ -43,6 +45,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         GameManagerObj = GameObject.FindGameObjectWithTag("gamemanager");
         gameManager = GameManagerObj.GetComponent<GameManager>();
+        LightFella = GameObject.FindGameObjectWithTag("LightFella");
     }
 
     //Moves player on x axis
@@ -60,12 +63,25 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.CompareTag("LevelComplete"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Debug.Log("Complete");
+        }
 
+        if (other.CompareTag("DeathPlane") || other.CompareTag("Spikes"))
+        {
+            gameManager.playerDied = true;
+            Destroy(gameObject);
+        }
+        if (other.CompareTag("MoveLightFella"))
+        {
+            LightFella.transform.position = new Vector3(17.68f, 1.44f, 0);
+        }
     }
 
     void Update()
     {
-        
 
         if (rb.velocity.y < maxYVelocity)
         {
@@ -129,4 +145,5 @@ public class PlayerController : MonoBehaviour
 
         animator.SetBool("Moving", isMoving);
     }
+
 }

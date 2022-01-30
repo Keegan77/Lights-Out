@@ -1,0 +1,828 @@
+fileFormatVersion: 2
+guid: 4961971be97ea744c81b4d4f0bf0487f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7176145559203867224
+    second: TitleScreenAnimBurner_0
+  - first:
+      213: -8408921092508222170
+    second: TitleScreenAnimBurner_1
+  - first:
+      213: 8188206267328071737
+    second: TitleScreenAnimBurner_2
+  - first:
+      213: 438603184571686985
+    second: TitleScreenAnimBurner_3
+  - first:
+      213: -271601152221317580
+    second: TitleScreenAnimBurner_4
+  - first:
+      213: -8409079324257854479
+    second: TitleScreenAnimBurner_5
+  - first:
+      213: -9052919157044238376
+    second: TitleScreenAnimBurner_6
+  - first:
+      213: 1310663254658380274
+    second: TitleScreenAnimBurner_7
+  - first:
+      213: -6620402962125374115
+    second: TitleScreenAnimBurner_8
+  - first:
+      213: 4756681323037596034
+    second: TitleScreenAnimBurner_9
+  - first:
+      213: 530179611608226736
+    second: TitleScreenAnimBurner_10
+  - first:
+      213: 3910033282080321419
+    second: TitleScreenAnimBurner_11
+  - first:
+      213: -3975512803171810073
+    second: TitleScreenAnimBurner_12
+  - first:
+      213: 7548561733690940799
+    second: TitleScreenAnimBurner_13
+  - first:
+      213: -7368553276135709368
+    second: TitleScreenAnimBurner_14
+  - first:
+      213: 5071102630787040311
+    second: TitleScreenAnimBurner_15
+  - first:
+      213: -6650403980911866814
+    second: TitleScreenAnimBurner_16
+  - first:
+      213: -9055873460669508190
+    second: TitleScreenAnimBurner_17
+  - first:
+      213: 8652090844486366693
+    second: TitleScreenAnimBurner_18
+  - first:
+      213: 1863049800136770674
+    second: TitleScreenAnimBurner_19
+  - first:
+      213: -6618125511210143607
+    second: TitleScreenAnimBurner_20
+  - first:
+      213: -875734113553405017
+    second: TitleScreenAnimBurner_21
+  - first:
+      213: -5964281717559307223
+    second: TitleScreenAnimBurner_22
+  - first:
+      213: -4376444295492752018
+    second: TitleScreenAnimBurner_23
+  - first:
+      213: -270204520927308801
+    second: TitleScreenAnimBurner_24
+  - first:
+      213: 1266987448541551154
+    second: TitleScreenAnimBurner_25
+  - first:
+      213: 3732567594196960904
+    second: TitleScreenAnimBurner_26
+  - first:
+      213: -3968113632951472827
+    second: TitleScreenAnimBurner_27
+  - first:
+      213: -8253068554844231195
+    second: TitleScreenAnimBurner_28
+  - first:
+      213: -5354806447815861296
+    second: TitleScreenAnimBurner_29
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5182f72a5396c90800000000000000
+      internalID: -7176145559203867224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_1
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 360
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62df1c891d28d4b80800000000000000
+      internalID: -8408921092508222170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 360
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93887b7973a52a170800000000000000
+      internalID: 8188206267328071737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_3
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 360
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94020c5c54b361600800000000000000
+      internalID: 438603184571686985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_4
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 360
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436f249e0341b3cf0800000000000000
+      internalID: -271601152221317580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb578568e2fc4b80800000000000000
+      internalID: -8409079324257854479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_6
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 288
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7ac08bdf19d5280800000000000000
+      internalID: -9052919157044238376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_7
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 288
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1f1123949603210800000000000000
+      internalID: 1310663254658380274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_8
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 288
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5db294159a9f14a0800000000000000
+      internalID: -6620402962125374115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_9
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 288
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28914691670230240800000000000000
+      internalID: 4756681323037596034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb10193c839b5700800000000000000
+      internalID: 530179611608226736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_11
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 216
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f2a56cd8a334630800000000000000
+      internalID: 3910033282080321419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_12
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 216
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e44dee2b2424d8c0800000000000000
+      internalID: -3975512803171810073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_13
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 216
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d51cd17e0e1c860800000000000000
+      internalID: 7548561733690940799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_14
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 216
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845e36be5d3adb990800000000000000
+      internalID: -7368553276135709368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7344c9f89fc206640800000000000000
+      internalID: 5071102630787040311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_16
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 144
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c87e090d405b3a0800000000000000
+      internalID: -6650403980911866814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_17
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 144
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a518ed4113135280800000000000000
+      internalID: -9055873460669508190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_18
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 144
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5f40648c6621870800000000000000
+      internalID: 8652090844486366693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_19
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 144
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274c3002ce1ead910800000000000000
+      internalID: 1863049800136770674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9807e5179e1b724a0800000000000000
+      internalID: -6618125511210143607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_21
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 72
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab25fba674c8d3f0800000000000000
+      internalID: -875734113553405017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_22
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 72
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9245584c06d9a3da0800000000000000
+      internalID: -5964281717559307223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_23
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 72
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6daed3c91fb343c0800000000000000
+      internalID: -4376444295492752018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_24
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 72
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff35c697b6a004cf0800000000000000
+      internalID: -270204520927308801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a92352f5e359110800000000000000
+      internalID: 1266987448541551154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_26
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8868e30737ebcc330800000000000000
+      internalID: 3732567594196960904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_27
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54dea8fbcad6ee8c0800000000000000
+      internalID: -3968113632951472827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_28
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9209140e5377d80800000000000000
+      internalID: -8253068554844231195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenAnimBurner_29
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 140
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dbd6fc18e7efa5b0800000000000000
+      internalID: -5354806447815861296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

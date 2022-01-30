@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    float startDeathTime = 1f;
+    float deathTimer;
+
     private float timeStart = 5;
     private float timer = 5;
     private float startAnim = 1.667f; // this is the time that the lightfella anim has to begin in order for the animation to end right when the scene changes from light to dark // vice versa
@@ -15,6 +19,9 @@ public class GameManager : MonoBehaviour
     bool endPreLightFellaAnim;
     public Color colorWhite = Color.white;
     public Color colorBlack = Color.black;
+
+    public bool playerDied;
+
     GameObject Camera;
     Camera Background;
     Animator playerAnimator;
@@ -23,15 +30,21 @@ public class GameManager : MonoBehaviour
     GameObject Player;
     [SerializeField] SpawnLines[] LineSpawner;
     [SerializeField] SpawnWhiteLines[] WhiteLineSpawner;
+    [SerializeField] spawnWhiteLinesWall[] WhiteLineSpawnerWall;
+    [SerializeField] SpawnBlackLinesWall[] BlackLineSpawnerWall;
     //GameObject[] dottedLineSpawners;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerDied = false;
+        deathTimer = startDeathTime;
         Camera = GameObject.FindGameObjectWithTag("MainCamera");
         Background = Camera.GetComponent<Camera>();
         LineSpawner = FindObjectsOfType<SpawnLines>();
         WhiteLineSpawner = FindObjectsOfType<SpawnWhiteLines>();
+        WhiteLineSpawnerWall = FindObjectsOfType<spawnWhiteLinesWall>();
+        BlackLineSpawnerWall = FindObjectsOfType<SpawnBlackLinesWall>();
         Player = GameObject.FindGameObjectWithTag("Player");
         LightFella = GameObject.FindGameObjectWithTag("LightFella");
         playerAnimator = Player.GetComponent<Animator>();
@@ -41,6 +54,16 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerDied)
+        {
+            deathTimer -= Time.deltaTime;
+            if (deathTimer < 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+            
+        }
+
         colorIsWhiteCopy = colorIsWhite;
         timer = timer - Time.deltaTime;
         //Debug.Log(timer);
@@ -61,6 +84,10 @@ public class GameManager : MonoBehaviour
                 {
                     LineSpawner.justSwitched = true;
                 }
+                foreach (SpawnBlackLinesWall BlackLineSpawnerWall in BlackLineSpawnerWall)
+                {
+                    BlackLineSpawnerWall.justSwitched = true;
+                }
             } else if (!colorIsWhite)
             {
                 Background.backgroundColor = colorWhite;
@@ -68,6 +95,10 @@ public class GameManager : MonoBehaviour
                 foreach (SpawnWhiteLines WhiteLineSpawner in WhiteLineSpawner)
                 {
                     WhiteLineSpawner.justSwitched = true;
+                }
+                foreach (spawnWhiteLinesWall WhiteLineSpawnerWall in WhiteLineSpawnerWall)
+                {
+                    WhiteLineSpawnerWall.justSwitched = true;
                 }
             }
             
@@ -80,7 +111,6 @@ public class GameManager : MonoBehaviour
         if (timer < startAnim)
         {
             lightFellaAnim = true;
-            Debug.Log("true");
         }
         playerAnimator.SetBool("colorIsWhite", colorIsWhite);
         fellaAnimator.SetBool("StartAnim", lightFellaAnim);

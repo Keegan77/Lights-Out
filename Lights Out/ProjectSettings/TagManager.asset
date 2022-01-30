@@ -9,6 +9,11 @@ TagManager:
   - LineSpawner
   - LineDeleter
   - LightFella
+  - LevelComplete
+  - DeathPlane
+  - GoBack
+  - Spikes
+  - MoveLightFella
   layers:
   - Default
   - TransparentFX
@@ -48,4 +53,7 @@ TagManager:
     locked: 0
   - name: front
     uniqueID: 933527345
+    locked: 0
+  - name: frontfront
+    uniqueID: 3376625583
     locked: 0
