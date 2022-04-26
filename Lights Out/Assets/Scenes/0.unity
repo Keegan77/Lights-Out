@@ -4494,7 +4494,7 @@ GameObject:
   - component: {fileID: 1661914592880377894}
   m_Layer: 6
   m_Name: WhitePlatform (2)
-  m_TagString: Platform
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4575,6 +4575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementCap: 20
+  playerTransform: {fileID: 1371450180}
 --- !u!4 &1661914592880377944
 Transform:
   m_ObjectHideFlags: 0

@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     public float maxYVelocity = -50;
 
     public bool isMoving;
+    public bool onMovingPlat;
     Animator animator;
     GameObject GameManagerObj;
     GameManager gameManager;
@@ -149,8 +150,21 @@ public class PlayerController : MonoBehaviour
                 isJumping = false;
             }
         }
-
         animator.SetBool("Moving", isMoving);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("MovingPlatform"))
+        {
+            onMovingPlat = true;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("MovingPlatform"))
+        {
+            onMovingPlat = false;
+        }
+    }
 }

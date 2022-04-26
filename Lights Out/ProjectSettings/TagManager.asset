@@ -16,6 +16,7 @@ TagManager:
   - MoveLightFella
   - playerFinale
   - Music
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX

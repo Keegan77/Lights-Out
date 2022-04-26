@@ -132,6 +132,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 11.2
   jumpForce: 35
+  lightFellaTransport: {x: 0, y: 0, z: 0}
+  jump: {fileID: 0}
+  diedSound: {fileID: 0}
   feetPos: {fileID: 4998301435671377082}
   checkRadius: 0.3
   whatIsGround:
@@ -142,6 +145,7 @@ MonoBehaviour:
   lowJumpMultiplier: 5
   maxYVelocity: -30
   isMoving: 0
+  frictionMaterial: {fileID: 6200000, guid: 6c67047d36e34bd43ac66695f3c311eb, type: 2}
 --- !u!114 &4998301435857071295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +189,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 4998301435857071168}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6c67047d36e34bd43ac66695f3c311eb, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
