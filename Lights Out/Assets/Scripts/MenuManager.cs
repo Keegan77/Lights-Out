@@ -39,7 +39,7 @@ public class MenuManager : MonoBehaviour
             }
             if (animEnded)
             {
-                if (Input.GetKeyDown(KeyCode.Return))
+                if (Input.anyKey)
                 {
                     SceneManager.LoadScene(1);
                 }

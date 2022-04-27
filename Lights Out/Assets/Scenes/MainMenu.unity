@@ -159,7 +159,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -182}
-  m_SizeDelta: {x: 844.2804, y: 135.9786}
+  m_SizeDelta: {x: 997.127, y: 135.9786}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &231674359
 Animator:
@@ -213,7 +213,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: enter to start
+  m_Text: press any button
 --- !u!222 &231674361
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -617,8 +617,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -182}
-  m_SizeDelta: {x: 564.2888, y: 135.9786}
+  m_AnchoredPosition: {x: 0.00001049, y: -182}
+  m_SizeDelta: {x: 737.0726, y: 135.9786}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1719326882
 MonoBehaviour:
@@ -653,7 +653,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: press "s"
+  m_Text: press "down"
 --- !u!222 &1719326883
 CanvasRenderer:
   m_ObjectHideFlags: 0
