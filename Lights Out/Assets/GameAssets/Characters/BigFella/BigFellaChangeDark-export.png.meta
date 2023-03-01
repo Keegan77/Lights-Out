@@ -63,7 +63,7 @@ TextureImporter:
       213: -8650953785150129228
     second: BigFellaChangeDark-export_19
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -84,6 +84,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -122,6 +123,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -137,6 +139,42 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -580,6 +618,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      BigFellaChangeDark-export_5: 6462634632196005955
+      BigFellaChangeDark-export_11: 1246777353744987759
+      BigFellaChangeDark-export_1: -7537141126584559066
+      BigFellaChangeDark-export_0: -6949002065541359172
+      BigFellaChangeDark-export_14: -5747693533943322641
+      BigFellaChangeDark-export_8: -1974716478942423437
+      BigFellaChangeDark-export_18: -137455530473394223
+      BigFellaChangeDark-export_7: -2867243715833334512
+      BigFellaChangeDark-export_15: 324819112954499593
+      BigFellaChangeDark-export_4: 4937291590079666003
+      BigFellaChangeDark-export_16: 5259372749599246614
+      BigFellaChangeDark-export_9: -4832357308619403032
+      BigFellaChangeDark-export_6: 4417924735072824917
+      BigFellaChangeDark-export_3: -2694293715429982184
+      BigFellaChangeDark-export_12: 8386014046573206777
+      BigFellaChangeDark-export_13: 3578719611991178625
+      BigFellaChangeDark-export_10: 6240590920449333005
+      BigFellaChangeDark-export_2: 1945271702274219598
+      BigFellaChangeDark-export_17: 7008655121328156494
+      BigFellaChangeDark-export_19: -8650953785150129228
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

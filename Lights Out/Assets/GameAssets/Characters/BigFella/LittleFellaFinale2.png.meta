@@ -216,7 +216,7 @@ TextureImporter:
       213: 5696362211401506562
     second: LittleFellaFinale2_70
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -237,6 +237,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -275,6 +276,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -290,6 +292,42 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1804,6 +1842,78 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      LittleFellaFinale2_44: 4675752837808865481
+      LittleFellaFinale2_20: 3919694623725027711
+      LittleFellaFinale2_61: 4488983927471574452
+      LittleFellaFinale2_50: -5142506647605758616
+      LittleFellaFinale2_22: 2703530360427505901
+      LittleFellaFinale2_69: -348303927306719514
+      LittleFellaFinale2_59: 7215026041596186722
+      LittleFellaFinale2_54: 946702858327619229
+      LittleFellaFinale2_56: 3217443089324170000
+      LittleFellaFinale2_48: -5545282115278965652
+      LittleFellaFinale2_0: -4339190668227880487
+      LittleFellaFinale2_15: 8730548732042547683
+      LittleFellaFinale2_7: 5384089489820871975
+      LittleFellaFinale2_66: 1090155696438103523
+      LittleFellaFinale2_51: 3146324777776285237
+      LittleFellaFinale2_6: -2964842000535409007
+      LittleFellaFinale2_63: -6645997489609403652
+      LittleFellaFinale2_33: 784016900830897230
+      LittleFellaFinale2_64: 8496284954330091837
+      LittleFellaFinale2_34: 2452596381736175942
+      LittleFellaFinale2_55: -1540019465466321946
+      LittleFellaFinale2_29: 7652692676813533679
+      LittleFellaFinale2_30: -3116765431944781120
+      LittleFellaFinale2_49: -6488345763543463732
+      LittleFellaFinale2_62: 8201278638369033923
+      LittleFellaFinale2_13: 5509298655135319296
+      LittleFellaFinale2_27: -1696599660485031409
+      LittleFellaFinale2_46: 3316925556512506842
+      LittleFellaFinale2_9: 8806600183111878148
+      LittleFellaFinale2_25: 4017941895590122355
+      LittleFellaFinale2_58: 1624684656649680457
+      LittleFellaFinale2_1: 6840858622522173161
+      LittleFellaFinale2_57: 2454778516276959549
+      LittleFellaFinale2_16: -2250188082481383198
+      LittleFellaFinale2_41: 2820200380679047377
+      LittleFellaFinale2_17: -5038257768836157464
+      LittleFellaFinale2_47: -1123462607702188476
+      LittleFellaFinale2_37: -5194786610570196578
+      LittleFellaFinale2_4: -1288139146309393371
+      LittleFellaFinale2_3: 2411753166444711501
+      LittleFellaFinale2_32: 3235229698661666159
+      LittleFellaFinale2_52: -383927728490222077
+      LittleFellaFinale2_39: -3615780605878417299
+      LittleFellaFinale2_23: -5593013362713066252
+      LittleFellaFinale2_36: -5707761807723009797
+      LittleFellaFinale2_2: -8532029326956005629
+      LittleFellaFinale2_5: 5001219783777773504
+      LittleFellaFinale2_60: 5336899825104773895
+      LittleFellaFinale2_43: 8888798641425855418
+      LittleFellaFinale2_18: 7818398434464004811
+      LittleFellaFinale2_14: 4643961695061410591
+      LittleFellaFinale2_8: -7227521519658823889
+      LittleFellaFinale2_26: -5464209687957907450
+      LittleFellaFinale2_11: -4204853732702378452
+      LittleFellaFinale2_10: -5037696436050780338
+      LittleFellaFinale2_28: 4953769656294074869
+      LittleFellaFinale2_24: -1977582694725634703
+      LittleFellaFinale2_31: -7696617685903455873
+      LittleFellaFinale2_68: -4081480140611827768
+      LittleFellaFinale2_40: 8221979019688557931
+      LittleFellaFinale2_70: 5696362211401506562
+      LittleFellaFinale2_21: -5508147967744855708
+      LittleFellaFinale2_42: 7514610403631724307
+      LittleFellaFinale2_45: -4234391952680151439
+      LittleFellaFinale2_67: -9098989439799800334
+      LittleFellaFinale2_53: -1064626474888894950
+      LittleFellaFinale2_12: 5718750843786509370
+      LittleFellaFinale2_19: -539737405832308140
+      LittleFellaFinale2_65: -1391923476456828437
+      LittleFellaFinale2_38: -639898669627821511
+      LittleFellaFinale2_35: 8733063219108516982
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

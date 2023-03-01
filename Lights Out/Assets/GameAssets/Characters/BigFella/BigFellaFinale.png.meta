@@ -117,7 +117,7 @@ TextureImporter:
       213: 6527656259574997602
     second: BigFellaFinale_37
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -138,6 +138,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -176,6 +177,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -191,6 +193,42 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1012,6 +1050,45 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      BigFellaFinale_1: 4422248019680892032
+      BigFellaFinale_13: 3519870761635543414
+      BigFellaFinale_35: 7563759802959840726
+      BigFellaFinale_31: -4514959280183991820
+      BigFellaFinale_34: 5175140228362261103
+      BigFellaFinale_19: -1022936602567368842
+      BigFellaFinale_8: -4283696589480029002
+      BigFellaFinale_2: 5548052938027079068
+      BigFellaFinale_29: 7168316416847826847
+      BigFellaFinale_9: -9046737454967520986
+      BigFellaFinale_3: -6837489948640766517
+      BigFellaFinale_10: 7187526822582470173
+      BigFellaFinale_4: -7278524981419309124
+      BigFellaFinale_18: 1369549405310548010
+      BigFellaFinale_6: 5810421472373685680
+      BigFellaFinale_16: 4645111235796664735
+      BigFellaFinale_30: -1933261278059522071
+      BigFellaFinale_21: 1078244487878376291
+      BigFellaFinale_14: 385403793625040536
+      BigFellaFinale_15: -226777074848901425
+      BigFellaFinale_37: 6527656259574997602
+      BigFellaFinale_0: 4934241520790461188
+      BigFellaFinale_7: -6819760546147033623
+      BigFellaFinale_24: 7229675533386512679
+      BigFellaFinale_27: -4668435816248446625
+      BigFellaFinale_25: 5707672731497482322
+      BigFellaFinale_36: -322012091820639139
+      BigFellaFinale_22: -5591597580394214455
+      BigFellaFinale_33: -6171711203773254135
+      BigFellaFinale_5: -3661156487840840598
+      BigFellaFinale_12: -8099323082459612505
+      BigFellaFinale_17: -1570328006467389811
+      BigFellaFinale_23: 2002653719985707908
+      BigFellaFinale_11: 1234058734776124487
+      BigFellaFinale_26: 1138280521899185121
+      BigFellaFinale_32: 8313944352214686388
+      BigFellaFinale_28: 6839048449984419412
+      BigFellaFinale_20: -2729074578886361118
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -93,7 +93,7 @@ TextureImporter:
       213: -5354806447815861296
     second: TitleScreenAnimBurner_29
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -114,6 +114,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -152,6 +153,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -167,6 +169,42 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -820,6 +858,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      TitleScreenAnimBurner_17: -9055873460669508190
+      TitleScreenAnimBurner_6: -9052919157044238376
+      TitleScreenAnimBurner_5: -8409079324257854479
+      TitleScreenAnimBurner_0: -7176145559203867224
+      TitleScreenAnimBurner_7: 1310663254658380274
+      TitleScreenAnimBurner_11: 3910033282080321419
+      TitleScreenAnimBurner_13: 7548561733690940799
+      TitleScreenAnimBurner_16: -6650403980911866814
+      TitleScreenAnimBurner_18: 8652090844486366693
+      TitleScreenAnimBurner_23: -4376444295492752018
+      TitleScreenAnimBurner_10: 530179611608226736
+      TitleScreenAnimBurner_21: -875734113553405017
+      TitleScreenAnimBurner_19: 1863049800136770674
+      TitleScreenAnimBurner_2: 8188206267328071737
+      TitleScreenAnimBurner_1: -8408921092508222170
+      TitleScreenAnimBurner_12: -3975512803171810073
+      TitleScreenAnimBurner_14: -7368553276135709368
+      TitleScreenAnimBurner_4: -271601152221317580
+      TitleScreenAnimBurner_9: 4756681323037596034
+      TitleScreenAnimBurner_15: 5071102630787040311
+      TitleScreenAnimBurner_20: -6618125511210143607
+      TitleScreenAnimBurner_25: 1266987448541551154
+      TitleScreenAnimBurner_29: -5354806447815861296
+      TitleScreenAnimBurner_24: -270204520927308801
+      TitleScreenAnimBurner_27: -3968113632951472827
+      TitleScreenAnimBurner_22: -5964281717559307223
+      TitleScreenAnimBurner_3: 438603184571686985
+      TitleScreenAnimBurner_28: -8253068554844231195
+      TitleScreenAnimBurner_8: -6620402962125374115
+      TitleScreenAnimBurner_26: 3732567594196960904
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
