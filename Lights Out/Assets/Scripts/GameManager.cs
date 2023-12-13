@@ -5,130 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    float startDeathTime = 1f;
-    float deathTimer;
-
-    public AudioSource lightSwitchSound;
-
-    public float timeStart = 5;
-    private float timer;
-    private float startAnim = 1.667f; // this is the time that the lightfella anim has to begin in order for the animation to end right when the scene changes from light to dark // vice versa
-    private float endPreAnim = 3.33f; // value that the pre idle anim should end
-    public bool colorIsWhite = true;
-    public bool colorIsWhiteCopy;
-    public bool timerSwitch;
-    bool lightFellaAnim;
-    bool endPreLightFellaAnim;
-    public Color colorWhite = Color.white;
-    public Color colorBlack = Color.black;
-
-    public bool playerDied;
-
-    GameObject Camera;
-    Camera Background;
-    Animator playerAnimator;
-    Animator fellaAnimator;
-    GameObject LightFella;
-    GameObject Player;
-    [SerializeField] SpawnLines[] LineSpawner;
-    [SerializeField] SpawnWhiteLines[] WhiteLineSpawner;
-    [SerializeField] spawnWhiteLinesWall[] WhiteLineSpawnerWall;
-    [SerializeField] SpawnBlackLinesWall[] BlackLineSpawnerWall;
-    //GameObject[] dottedLineSpawners;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        playerDied = false;
-        deathTimer = startDeathTime;
-        timer = timeStart;
-        Camera = GameObject.FindGameObjectWithTag("MainCamera");
-        Background = Camera.GetComponent<Camera>();
-        LineSpawner = FindObjectsOfType<SpawnLines>();
-        WhiteLineSpawner = FindObjectsOfType<SpawnWhiteLines>();
-        WhiteLineSpawnerWall = FindObjectsOfType<spawnWhiteLinesWall>();
-        BlackLineSpawnerWall = FindObjectsOfType<SpawnBlackLinesWall>();
-        Player = GameObject.FindGameObjectWithTag("Player");
-        LightFella = GameObject.FindGameObjectWithTag("LightFella");
-        playerAnimator = Player.GetComponent<Animator>();
-        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByBuildIndex(7))
-        {
-            fellaAnimator = LightFella.GetComponent<Animator>();
-        }
+    public static GameManager Instance;
         
-    }
-
-    // Update is called once per frame
-    void Update()
+    private void Awake() // Setup singleton pattern
     {
-        if (playerDied)
+        if (Instance == null)
         {
-            deathTimer -= Time.deltaTime;
-            if (deathTimer < 0)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
-            
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-        colorIsWhiteCopy = colorIsWhite;
-        timer = timer - Time.deltaTime;
-        //Debug.Log(timer);
-        if (timer < 0)
+        else
         {
-            timerSwitch = true;
-            lightFellaAnim = false;
-            endPreLightFellaAnim = false;
-            timer = timeStart;
+            Destroy(gameObject);
         }
-        if (timerSwitch == true)
-        {
-            lightSwitchSound.Play();
-            if (colorIsWhite)
-            {
-                Background.backgroundColor = colorBlack;
-                colorIsWhite = false;
-                foreach (SpawnLines LineSpawner in LineSpawner) // sets line spawner bools to true
-                {
-                    LineSpawner.justSwitched = true;
-                }
-                foreach (SpawnBlackLinesWall BlackLineSpawnerWall in BlackLineSpawnerWall)
-                {
-                    BlackLineSpawnerWall.justSwitched = true;
-                }
-            } else if (!colorIsWhite)
-            {
-                Background.backgroundColor = colorWhite;
-                colorIsWhite = true;
-                foreach (SpawnWhiteLines WhiteLineSpawner in WhiteLineSpawner)
-                {
-                    WhiteLineSpawner.justSwitched = true;
-                }
-                foreach (spawnWhiteLinesWall WhiteLineSpawnerWall in WhiteLineSpawnerWall)
-                {
-                    WhiteLineSpawnerWall.justSwitched = true;
-                }
-            }
-            
-            timerSwitch = false;
-        }
-        if (timer < endPreAnim)
-        {
-            endPreLightFellaAnim = true;
-        }
-        if (timer < startAnim)
-        {
-            lightFellaAnim = true;
-        }
-        if (playerAnimator != null)
-        {
-            playerAnimator.SetBool("colorIsWhite", colorIsWhite);
-        }
-        if (fellaAnimator != null)
-        {
-            fellaAnimator.SetBool("StartAnim", lightFellaAnim);
-            fellaAnimator.SetBool("colorIsLight", colorIsWhiteCopy);
-            fellaAnimator.SetBool("endPreAnim", endPreLightFellaAnim);
-        }
-
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

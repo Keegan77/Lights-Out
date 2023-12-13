@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     private float moveInput;
     public Vector3 lightFellaTransport;
-    public AudioSource jump;
+    public AudioSource jumpSound;
     public AudioSource diedSound;
 
     [Header("Layer Mask")]
@@ -21,21 +22,19 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
 
     [Header("Jump")]
-    private float jumpTimeCounter;
-    public float jumpTime;
     private bool isJumping;
 
     [Header("fall physics")]
     public float fallMultiplier;
     public float lowJumpMultiplier;
 
-    public float maxYVelocity = -50;
+    [FormerlySerializedAs("maxYVelocity")] public float maxFallingSpeed = -30;
 
+    [SerializeField] private float deathWaitTime;
+    
     public bool isMoving;
     public bool onMovingPlat;
     Animator animator;
-    GameObject GameManagerObj;
-    GameManager gameManager;
     GameObject LightFella;
 
     //Gets Rigidbody component
@@ -47,8 +46,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        GameManagerObj = GameObject.FindGameObjectWithTag("gamemanager");
-        gameManager = GameManagerObj.GetComponent<GameManager>();
         LightFella = GameObject.FindGameObjectWithTag("LightFella");
     }
 
@@ -75,9 +72,8 @@ public class PlayerController : MonoBehaviour
 
         if (other.CompareTag("DeathPlane") || other.CompareTag("Spikes"))
         {
-            gameManager.playerDied = true;
             diedSound.Play();
-            Destroy(gameObject);
+            StartCoroutine(WaitToDie());
         }
         if (other.CompareTag("MoveLightFella"))
         {
@@ -86,69 +82,43 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private IEnumerator WaitToDie()
+    {
+        yield return new WaitForSeconds(deathWaitTime);
+        GameManager.Instance.RestartGame();
+    }
+
     void Update()
     {
-
-        if (rb.velocity.y < maxYVelocity)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, maxYVelocity);
-        }
-
-
+        rb.velocity = Vector2.Max(rb.velocity, new Vector2(rb.velocity.x, maxFallingSpeed));
+        
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
         if (moveInput > 0)
         {
-            transform.localScale = new Vector3(1.248608f, 1.249893f, 1.248608f);
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), 
+                                                 transform.localScale.y, 
+                                                 transform.localScale.z);
         }
         else if (moveInput < 0)
         {
-            transform.localScale = new Vector3(-1.248608f, 1.248608f, 1.248608f);
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), 
+                                               transform.localScale.y, 
+                                               transform.localScale.z);
         }
-
-        //cool jump fall
-
+        // Increases fall gravity speed
         if (rb.velocity.y < 0)
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            rb.velocity += Vector2.up * (Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime);
         }
 
-        if (rb.velocity.y > 0)
-        {
-            if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Z))
-            {
-                rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-            }
-
-        }
-        //fixed double jump bug
-        if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.Z))
-        {
-            isJumping = false;
-        }
 
         //lets player jump
 
-        if (isGrounded == true && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Z)) && isJumping == false)
+        if (isGrounded == true && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Z)))
         {
-            isJumping = true;
-            /////////////////////////////////////////////////////////
-            jump.Play();
-            jumpTimeCounter = jumpTime;
+            jumpSound.Play();
             rb.velocity = Vector2.up * jumpForce;
-        }
-        //makes you jump higher when you hold down space
-        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Z)) && isJumping == true)
-        {
-            if (jumpTimeCounter > 0)
-            {
-                //rb.velocity = Vector2.up * jumpForce;
-                //jumpTimeCounter -= Time.deltaTime;
-            }
-            else
-            {
-                isJumping = false;
-            }
         }
         animator.SetBool("Moving", isMoving);
     }
@@ -159,6 +129,7 @@ public class PlayerController : MonoBehaviour
         {
             onMovingPlat = true;
         }
+
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
