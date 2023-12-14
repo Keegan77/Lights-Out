@@ -2,13 +2,13 @@ using System;
 using System.Collections;
 using UnityEngine;
 
+
 namespace Light_Switching
 {
     public class SpawnLines : MonoBehaviour
     {
         
-        private PlatformColliderSwitch.PlatformTypes platformType;
-        private PlatformColliderSwitch platformParent;
+        [SerializeField] private PlatformColliderSwitch.PlatformTypes platformType;
         
         public GameObject dottedLine;
         [SerializeField] private float lineSpeed = 1;
@@ -21,8 +21,7 @@ namespace Light_Switching
 
         private void Start()
         {
-            if (CheckPlatformStatus()) SpawnPreLines();
-            platformType = GetComponentInParent<PlatformColliderSwitch>().platformType;
+            SpawnPreLines();
         }
 
         private void SpawnPreLines()
@@ -33,11 +32,13 @@ namespace Light_Switching
                 for (int i = 0; i < numOfLines; i++)
                 {
                     float xOffset = -timeDifference * i;
-                    Vector3 spawnPosition = transform.position + transform.right * xOffset;
-
-                    Instantiate(dottedLine, spawnPosition, transform.rotation);
+                    Vector3 localUp = transform.localRotation * transform.right;
+                    Vector3 spawnPosition = transform.position + localUp * xOffset;
+                    if (CheckPlatformStatus())
+                    {
+                        Instantiate(dottedLine, spawnPosition, transform.rotation);
+                    }
                 }
-                
             }
         }
 

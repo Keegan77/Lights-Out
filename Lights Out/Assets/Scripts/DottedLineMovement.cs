@@ -19,7 +19,8 @@ public class DottedLineMovement : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(-transform.right * (speed * Time.deltaTime));
+        Vector3 localUp = transform.localRotation * transform.right;
+        transform.Translate(localUp * (speed * Time.deltaTime));
     }
     private void LineDestruction()
     {
