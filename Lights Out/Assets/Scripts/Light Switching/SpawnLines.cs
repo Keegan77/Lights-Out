@@ -21,7 +21,7 @@ namespace Light_Switching
 
         private void Start()
         {
-            SpawnPreLines();
+            if (CheckPlatformStatus()) SpawnPreLines();
             platformType = GetComponentInParent<PlatformColliderSwitch>().platformType;
         }
 

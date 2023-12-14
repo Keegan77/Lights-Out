@@ -35,9 +35,7 @@ public class PlayerController : MonoBehaviour
     public bool isMoving;
     public bool onMovingPlat;
     Animator animator;
-    GameObject LightFella;
-
-    //Gets Rigidbody component
+    private GameObject LightFella;
 
     private void Awake()
     {

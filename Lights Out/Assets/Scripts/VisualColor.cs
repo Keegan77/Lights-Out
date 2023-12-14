@@ -1,16 +1,22 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Light_Switching;
+﻿using Light_Switching;
 using UnityEngine;
 
 public class VisualColor : MonoBehaviour
 {
-    private Camera cam;
-
+    [SerializeField] GameObject inversionMask;
+    public static VisualColor Instance;
+    
     private void Awake()
     {
-        cam = GetComponent<Camera>();
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnEnable() => TimePhaseManager.OnPhaseChanged += SwitchVisualColor;
@@ -18,6 +24,6 @@ public class VisualColor : MonoBehaviour
 
     private void SwitchVisualColor()
     {
-        cam.backgroundColor = TimePhaseManager.Instance.IsLight() ? Color.white : Color.black;
+        inversionMask.SetActive(!TimePhaseManager.Instance.IsLight());
     }
 }
