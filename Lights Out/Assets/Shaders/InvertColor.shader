@@ -5,30 +5,45 @@ Shader "Custom/InvertColor"
     }
     SubShader
     {
+        Tags { "Queue"="Overlay" "IgnoreProjector"="True" }
+
         Pass
         {
-            Tags { "Queue"="Overlay+100" "IgnoreProjector"="True" }
-   
             Blend OneMinusDstColor OneMinusSrcColor
             ColorMask RGB
-   
+
             ZWrite Off
             ZTest Always
- 
+
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-   
-            float4 vert(float4 vertex : POSITION) : SV_Position {
-              return UnityObjectToClipPos(vertex);
-            }
- 
+
+            #include "UnityCG.cginc"
+
+            struct appdata
+            {
+                float4 vertex : POSITION;
+            };
+
+            struct v2f
+            {
+                float4 pos : POSITION;
+            };
+
             fixed4 _TintColor;
- 
-            fixed4 frag() : SV_Target {
-              return _TintColor;
+
+            v2f vert(appdata v)
+            {
+                v2f o;
+                o.pos = UnityObjectToClipPos(v.vertex);
+                return o;
             }
- 
+
+            fixed4 frag(v2f i) : SV_Target
+            {
+                return _TintColor;
+            }
             ENDCG
         }
     }

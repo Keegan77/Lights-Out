@@ -1374,13 +1374,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 130069835064034299, guid: 2628392a1256c5843aaa0fbbd8717485, type: 3}
+      propertyPath: m_Size.x
+      value: 0.19847755
+      objectReference: {fileID: 0}
+    - target: {fileID: 130069835064034299, guid: 2628392a1256c5843aaa0fbbd8717485, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.06394399
+      objectReference: {fileID: 0}
     - target: {fileID: 3735105872481850130, guid: 2628392a1256c5843aaa0fbbd8717485, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.54
       objectReference: {fileID: 0}
     - target: {fileID: 3735105872481850130, guid: 2628392a1256c5843aaa0fbbd8717485, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.178
+      value: -2.87
       objectReference: {fileID: 0}
     - target: {fileID: 3735105872481850130, guid: 2628392a1256c5843aaa0fbbd8717485, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1418,8 +1426,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhiteSpikesWall
       objectReference: {fileID: 0}
+    - target: {fileID: 6036838274363297797, guid: 2628392a1256c5843aaa0fbbd8717485, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.166
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1144288451963019824, guid: 2628392a1256c5843aaa0fbbd8717485, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2628392a1256c5843aaa0fbbd8717485, type: 3}
