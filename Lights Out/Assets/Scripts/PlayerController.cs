@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -13,7 +11,6 @@ public class PlayerController : MonoBehaviour
     private float moveInput;
     public Vector3 lightFellaTransport;
     public AudioSource jumpSound;
-    public AudioSource diedSound;
 
     [Header("Layer Mask")]
     private bool isGrounded;
@@ -70,8 +67,8 @@ public class PlayerController : MonoBehaviour
 
         if (other.CompareTag("DeathPlane") || other.CompareTag("Spikes"))
         {
-            diedSound.Play();
-            StartCoroutine(WaitToDie());
+            GameManager.Instance.StartCoroutine(GameManager.Instance.WaitToDie());
+            Destroy(gameObject);
         }
         if (other.CompareTag("MoveLightFella"))
         {
@@ -80,11 +77,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private IEnumerator WaitToDie()
-    {
-        yield return new WaitForSeconds(deathWaitTime);
-        GameManager.Instance.RestartGame();
-    }
+
 
     void Update()
     {

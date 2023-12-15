@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    [SerializeField] private AudioSource deathSound;
+    [SerializeField] private float deathWaitTime;
         
     private void Awake() // Setup singleton pattern
     {
@@ -23,4 +25,11 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    public IEnumerator WaitToDie()
+    {
+        deathSound.Play();
+        yield return new WaitForSeconds(deathWaitTime);
+        RestartGame();
+    }
+    
 }
