@@ -1,11 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Light_Switching;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.PlayerLoop;
-using Vector3 = System.Numerics.Vector3;
+
 
 public class LightFellaBehaviour : MonoBehaviour
 {
