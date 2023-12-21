@@ -5,6 +5,7 @@ public class VisualColor : MonoBehaviour
 {
     public static VisualColor Instance;
     private float _goal = 1;
+    [SerializeField] private AnimationCurve MotionCurve;
     [SerializeField] private float speed;
     [SerializeField] private GameObject inversionMask;
     private float _current, _target;
@@ -31,11 +32,10 @@ public class VisualColor : MonoBehaviour
         _current = Mathf.MoveTowards(_current, _target, speed * Time.deltaTime);
 
         inversionMask.transform.localScale = Vector3.Lerp(new Vector3(0, 1 ,1), 
-                                            new Vector3(_goal, inversionMask.transform.localScale.y, 
-                                                            inversionMask.transform.localScale.z), _current);
+                                       new Vector3(_goal, inversionMask.transform.localScale.y, 
+                                                    inversionMask.transform.localScale.z),
+                                                  MotionCurve.Evaluate(_current));
     }
-    
-
     private void OnEnable() => TimePhaseManager.OnPhaseChanged += SwitchVisualColor;
     private void OnDisable() => TimePhaseManager.OnPhaseChanged -= SwitchVisualColor;
 
