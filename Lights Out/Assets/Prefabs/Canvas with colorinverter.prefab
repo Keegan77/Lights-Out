@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3304772289042363218
+--- !u!1 &5146410108289055730
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5531487047154497693}
-  - component: {fileID: 5116091530557022133}
-  - component: {fileID: 6916489685710618699}
+  - component: {fileID: 6943299917155545250}
+  - component: {fileID: 5853253522947038511}
+  - component: {fileID: 836435658286970685}
   m_Layer: 5
   m_Name: InversionMask
   m_TagString: Untagged
@@ -18,43 +18,43 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &5531487047154497693
+--- !u!224 &6943299917155545250
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304772289042363218}
+  m_GameObject: {fileID: 5146410108289055730}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7333027510695179188}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &5116091530557022133
+--- !u!222 &5853253522947038511
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304772289042363218}
+  m_GameObject: {fileID: 5146410108289055730}
   m_CullTransparentMesh: 1
---- !u!114 &6916489685710618699
+--- !u!114 &836435658286970685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304772289042363218}
+  m_GameObject: {fileID: 5146410108289055730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 5a9a454c2d4b9b7449dd30333c797f1d, type: 2}
@@ -65,13 +65,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+  m_Sprite: {fileID: -2852564507685433053, guid: 407eedafe553d71438333dc54ca21214, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 3
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &7254603851735283906
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +107,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5531487047154497693}
+  - {fileID: 6943299917155545250}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -187,29 +190,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571aa73d06884c59a202d2528a3ac607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MotionCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2.7353358
-      outSlope: 2.7353358
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.0381558
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  speed: 3
-  inversionMask: {fileID: 3304772289042363218}
+  inversionMask: {fileID: 5146410108289055730}
+  transitionDataList:
+  - {fileID: 11400000, guid: 9cc677c73dec1ff4194ec912eedd6caf, type: 2}
+  - {fileID: 11400000, guid: bb87cd2a8acdc2a438655db164365407, type: 2}
+  - {fileID: 11400000, guid: ebc8be99b415f3e479df8465992b89bf, type: 2}
+  - {fileID: 11400000, guid: d9021b0a565378f4c8e7bed28c1a75f4, type: 2}
+  - {fileID: 11400000, guid: 0591b34e7fb0f4a45a5e727c229e6d9b, type: 2}
+  - {fileID: 11400000, guid: efa5014f1d585274383dd5c642ec4367, type: 2}
+  - {fileID: 11400000, guid: df6876ca93990f14d9ce9217653900e9, type: 2}
+  - {fileID: 11400000, guid: f6e15edf2ebdb5d46a409b17c3fe6992, type: 2}

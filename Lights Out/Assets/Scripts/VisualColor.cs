@@ -9,10 +9,12 @@ public class VisualColor : MonoBehaviour
     [SerializeField] private GameObject inversionMask;
     private float _current, _target;
     private Image inversionMaskImg;
-    [SerializeField] private TransitionAnimationData transitionData;
+    [SerializeField] private TransitionAnimationData[] transitionDataList;
+    private TransitionAnimationData transitionData;
     
     private void Awake()
     {
+        transitionData = transitionDataList[Random.Range(0, transitionDataList.Length)];
         if (Instance == null)
         {
             Instance = this;
@@ -42,6 +44,7 @@ public class VisualColor : MonoBehaviour
 
     private void SwitchVisualColor()
     {
+        transitionData = transitionDataList[Random.Range(0, transitionDataList.Length)];
         _target = _target == 1 ? 0 : 1;
     }
 }
