@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 689517589099672970}
   m_Layer: 0
   m_Name: DottedLineSpawner
-  m_TagString: Untagged
+  m_TagString: LineSpawner
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 576a499b8f72a8548995c89c1d477649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dottedLine: {fileID: 0}
+  platformType: 1
+  dottedLine: {fileID: 1511102615222194593, guid: 563fa89f6174d2e408a5e4f08d15077a, type: 3}
   lineSpeed: 1
   timeDifference: 0.5
-  darkPlatform: 0
-  numOfLines: 0
+  numOfLines: 5

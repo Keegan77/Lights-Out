@@ -5,6 +5,12 @@ namespace Light_Switching
 {
     public class TimePhaseManager : MonoBehaviour
     {
+        public enum TimePhase
+        {
+            Light,
+            Dark
+        }
+        
         public static TimePhaseManager Instance;
         private bool isLight = true; // default to light
         private bool paused;
@@ -48,6 +54,7 @@ namespace Light_Switching
             while (!paused)
             {
                 yield return new WaitForSeconds(timer - TimePhaseAnimLength);
+                if (paused) yield break;
                 StartFellaAnimation?.Invoke();
                 yield return new WaitForSeconds(TimePhaseAnimLength);
                 if (paused) yield break; // Leave coroutine if paused
@@ -83,12 +90,25 @@ namespace Light_Switching
             return isLight;
         }
         /// <summary>
-        /// Forces the time phase to light. Combine this with PauseTimePhase to stay on Light
+        /// Forces the time phase to light or dark. Combine this with PauseTimePhase to stay on the forced phase.
         /// </summary>
-        public void ForceLightTimePhase()
+        public void ForceTimePhase(TimePhase phase)
         {
-            isLight = true;
-            OnPhaseChanged?.Invoke();
+            if (phase == TimePhase.Light)
+            {
+                if (!isLight)
+                {
+                    isLight = true;
+                    OnPhaseChanged?.Invoke();
+                }
+                return; // if we get here, we force light. return to avoid setting isLight to false
+            }
+            if (isLight)
+            {
+                isLight = false; // if we get here, we force dark
+                OnPhaseChanged?.Invoke();
+            }
+            
         }
     }
 }

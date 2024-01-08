@@ -18,6 +18,7 @@ TagManager:
   - Music
   - MovingPlatform
   - FellaStartLocation
+  - VerticalLines
   layers:
   - Default
   - TransparentFX

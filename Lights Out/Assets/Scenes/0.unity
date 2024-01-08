@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhitePlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 4254105127386670242, guid: a1d9987c6e8b9234c8589e0f563b69d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.65
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -239,6 +243,10 @@ PrefabInstance:
     - target: {fileID: 4254105126879231597, guid: a1d9987c6e8b9234c8589e0f563b69d2, type: 3}
       propertyPath: m_Name
       value: WhitePlatform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4254105127386670242, guid: a1d9987c6e8b9234c8589e0f563b69d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.61
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2288,7 +2296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 580445012668858906, guid: 690d5bf75c56f5c4aa547c5bb0ef9289, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.65
+      value: -2.88
       objectReference: {fileID: 0}
     - target: {fileID: 580445012668858906, guid: 690d5bf75c56f5c4aa547c5bb0ef9289, type: 3}
       propertyPath: m_LocalPosition.z

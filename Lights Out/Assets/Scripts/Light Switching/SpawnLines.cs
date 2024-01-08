@@ -12,12 +12,17 @@ namespace Light_Switching
         
         public GameObject dottedLine;
         [SerializeField] private float lineSpeed = 1;
-        [SerializeField] private float timeDifference = .5f;
+        private float timeDifference;
         [SerializeField] private float numOfLines;
 
         
         private void OnEnable() => TimePhaseManager.OnPhaseChanged += SpawnPreLines;
         private void OnDisable() => TimePhaseManager.OnPhaseChanged -= SpawnPreLines;
+
+        private void Awake()
+        {
+            timeDifference = lineSpeed / 2;
+        }
 
         private void Start()
         {
@@ -31,10 +36,18 @@ namespace Light_Switching
                 StartCoroutine(Spawner());
                 for (int i = 0; i < numOfLines; i++)
                 {
-                    float xOffset = -timeDifference * i;
-                    Vector3 localUp = transform.localRotation * transform.right;
-                    Vector3 spawnPosition = transform.position + localUp * xOffset;
-                    if (CheckPlatformStatus())
+                    Vector3 spawnPosition;
+                    float xOffset = timeDifference * i;
+                    if (gameObject.CompareTag("VerticalLines"))
+                    {
+                        spawnPosition = transform.position - transform.right * xOffset;
+                    }
+                    else
+                    {
+                        spawnPosition = transform.position + transform.right * xOffset;
+                    }
+                    
+                    if (CheckPlatformStatus()) // must be checked again in case the timephase changed while the coroutine was running
                     {
                         Instantiate(dottedLine, spawnPosition, transform.rotation);
                     }
