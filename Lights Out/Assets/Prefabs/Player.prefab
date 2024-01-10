@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4998301435671377081
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4998301435671377082}
-  m_Layer: 0
-  m_Name: Feet
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4998301435671377082
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4998301435671377081}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4998301435857071293}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4998301435857071168
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,9 +35,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.01, y: -2.37, z: 0}
   m_LocalScale: {x: 1.2486079, y: 1.2498927, z: 1.2486079}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4998301435671377082}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4998301435857071292
@@ -136,16 +104,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 11.2
-  jumpForce: 35
+  jumpForce: 34
   lightFellaTransport: {x: 0, y: 0, z: 0}
   jumpSound: {fileID: 1673985909550257128}
-  diedSound: {fileID: 8922690292241647070}
-  feetPos: {fileID: 4998301435671377082}
-  checkRadius: 0.3
+  groundedBoxSize: {x: 0.98, y: 0.15}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 320
-  fallMultiplier: 4
+  fallMultiplier: 1
   lowJumpMultiplier: 5
   maxFallingSpeed: -30
   deathWaitTime: 1

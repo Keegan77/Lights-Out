@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -14,8 +15,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Layer Mask")]
     private bool isGrounded;
-    public Transform feetPos;
-    public float checkRadius;
+    public Vector2 groundedBoxSize;
+    private Vector2 groundedBoxPosition;
     public LayerMask whatIsGround;
 
     [Header("Jump")]
@@ -48,6 +49,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        rb.velocity = Vector2.Max(rb.velocity, new Vector2(rb.velocity.x, maxFallingSpeed));
+        
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         if (moveInput != 0)
@@ -57,7 +60,7 @@ public class PlayerController : MonoBehaviour
         else isMoving = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other) // entire class needs decoupling
     {
         if (other.CompareTag("LevelComplete"))
         {
@@ -76,14 +79,11 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
-
-
+    
     void Update()
     {
-        rb.velocity = Vector2.Max(rb.velocity, new Vector2(rb.velocity.x, maxFallingSpeed));
-        
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+        groundedBoxPosition = new Vector2(transform.position.x, transform.position.y - (transform.localScale.y / 2));
+        isGrounded = Physics2D.OverlapBox(groundedBoxPosition, groundedBoxSize, 0, whatIsGround);
 
         if (moveInput > 0)
         {
@@ -128,5 +128,12 @@ public class PlayerController : MonoBehaviour
         {
             onMovingPlat = false;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        //visualize grounded box
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - (transform.localScale.y / 2)), groundedBoxSize);
     }
 }
