@@ -28,7 +28,7 @@ public class LightFellaBehaviour : MonoBehaviour
 
     private void UpdateStartLocation(Scene _, LoadSceneMode __)
     {
-        nextLocation = GameObject.FindWithTag("FellaStartLocation").transform;
+        nextLocation = GameObject.FindWithTag("FellaStartLocation")?.transform;
         TransportLightFella?.Invoke(nextLocation);
     }
     private void OnEnable()
