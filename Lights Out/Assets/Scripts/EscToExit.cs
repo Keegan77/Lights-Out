@@ -7,7 +7,7 @@ public class EscToExit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(FindObjectOfType<VisualColor>()?.gameObject);
     }
 
     // Update is called once per frame

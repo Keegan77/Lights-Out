@@ -265,6 +265,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackSpikesWall 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3239841226977576927, guid: fa5e2c98425c3704a8fc3827c8d3c0cc, type: 3}
+      propertyPath: platformType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3650296722473071792, guid: fa5e2c98425c3704a8fc3827c8d3c0cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.56847
@@ -2338,6 +2342,10 @@ PrefabInstance:
       propertyPath: numOfLines
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 689517589099672970, guid: 690d5bf75c56f5c4aa547c5bb0ef9289, type: 3}
+      propertyPath: platformType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5549674669864203083, guid: 690d5bf75c56f5c4aa547c5bb0ef9289, type: 3}
       propertyPath: m_Name
       value: DottedLineSpawner
@@ -2859,6 +2867,10 @@ PrefabInstance:
     - target: {fileID: 3164070895735736198, guid: 423d3dd37c7d04748bc9743698b02f41, type: 3}
       propertyPath: m_Name
       value: BlackPlatform (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743547848895765215, guid: 423d3dd37c7d04748bc9743698b02f41, type: 3}
+      propertyPath: platformType
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5471,7 +5483,6 @@ MonoBehaviour:
   platformType: 1
   dottedLine: {fileID: 1511102615222194593, guid: 563fa89f6174d2e408a5e4f08d15077a, type: 3}
   lineSpeed: 1
-  timeDifference: 0.5
   numOfLines: 5
 --- !u!4 &2242345309960816184
 Transform:
@@ -5539,6 +5550,10 @@ PrefabInstance:
     - target: {fileID: 3164070895735736198, guid: 423d3dd37c7d04748bc9743698b02f41, type: 3}
       propertyPath: m_Name
       value: BlackPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743547848895765215, guid: 423d3dd37c7d04748bc9743698b02f41, type: 3}
+      propertyPath: platformType
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

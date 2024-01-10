@@ -1043,6 +1043,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackSpikesWall
       objectReference: {fileID: 0}
+    - target: {fileID: 3239841226977576927, guid: fa5e2c98425c3704a8fc3827c8d3c0cc, type: 3}
+      propertyPath: platformType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3650296722473071792, guid: fa5e2c98425c3704a8fc3827c8d3c0cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.56
@@ -1082,6 +1086,10 @@ PrefabInstance:
     - target: {fileID: 3650296722473071792, guid: fa5e2c98425c3704a8fc3827c8d3c0cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522125472197263646, guid: fa5e2c98425c3704a8fc3827c8d3c0cc, type: 3}
+      propertyPath: m_TagString
+      value: VerticalLines
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1381,6 +1389,10 @@ PrefabInstance:
     - target: {fileID: 130069835064034299, guid: 2628392a1256c5843aaa0fbbd8717485, type: 3}
       propertyPath: m_Offset.x
       value: 0.06394399
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643084276252762452, guid: 2628392a1256c5843aaa0fbbd8717485, type: 3}
+      propertyPath: m_TagString
+      value: VerticalLines
       objectReference: {fileID: 0}
     - target: {fileID: 3735105872481850130, guid: 2628392a1256c5843aaa0fbbd8717485, type: 3}
       propertyPath: m_LocalPosition.x

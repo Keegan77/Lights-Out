@@ -2532,6 +2532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackPlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 4743547848895765215, guid: 423d3dd37c7d04748bc9743698b02f41, type: 3}
+      propertyPath: platformType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -21,22 +21,17 @@ public class FinaleCutsceneController : MonoBehaviour
     private void Start()
     {
         TimePhaseManager.Instance.PauseTimephase(true);
-        if (FindObjectOfType<DontDestroyMusic>().gameObject != null)
-        {
-            Destroy(FindObjectOfType<DontDestroyMusic>().gameObject);
+        
+        Destroy(FindObjectOfType<DontDestroyMusic>()?.gameObject);
         
         // Gets rid of music for finale scene. In the future,
         // "DontDestroyMusic" will be changed to a class called
         // "MusicManager" which will have a method called "StopMusic"
         // or something like that. This class will be a singleton,
         // and can be accessed from it's static Instance variable.
-        }
+        
+        Destroy(FindObjectOfType<LightFellaBehaviour>()?.gameObject); //Destroys the light fella so he doesn't interfere with the cutscene                                               
 
-
-        if (FindObjectOfType<LightFellaBehaviour>().gameObject != null)
-        {
-            Destroy(FindObjectOfType<LightFellaBehaviour>().gameObject); //Destroys the light fella so he doesn't interfere with the cutscene                                               
-        }   
         
     }
 
