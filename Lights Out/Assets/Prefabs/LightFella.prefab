@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: eb26732b1c494324883c94a7701aa186, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -143,11 +143,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2217878519261886690, guid: 4ab8bc957d5e9474381798b3467eb112, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 2217878519261886690, guid: 4ab8bc957d5e9474381798b3467eb112, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 2217878519261886690, guid: 4ab8bc957d5e9474381798b3467eb112, type: 3}
       propertyPath: m_LocalPosition.z
@@ -184,6 +184,10 @@ PrefabInstance:
     - target: {fileID: 2437706299927363087, guid: 4ab8bc957d5e9474381798b3467eb112, type: 3}
       propertyPath: m_Name
       value: SpriteInversionCircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243478136787804935, guid: 4ab8bc957d5e9474381798b3467eb112, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

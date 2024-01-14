@@ -21,11 +21,14 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    /// <summary>
+    /// Restarts the current scene.
+    /// </summary>
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    public IEnumerator WaitToDie()
+    public IEnumerator DeathSequence()
     {
         deathSound.Play();
         yield return new WaitForSeconds(deathWaitTime);

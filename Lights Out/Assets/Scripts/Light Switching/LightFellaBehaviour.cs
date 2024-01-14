@@ -8,9 +8,11 @@ public class LightFellaBehaviour : MonoBehaviour
     public static LightFellaBehaviour Instance;
     [SerializeField] private Animator animator;
     private Transform nextLocation;
+    private Transform[] locationQueue;
     
-    public delegate void LightFellaRequest(Transform newLocation);
-    public static event LightFellaRequest TransportLightFella;
+    public delegate void LightFellaTransportRequest(Transform newLocation);
+    public LightFellaTransportRequest TransportLightFella; // not declared as event because we want to invoke it from
+                                                           // other scripts
     private void Awake()
     {
         if (Instance == null)
@@ -24,6 +26,7 @@ public class LightFellaBehaviour : MonoBehaviour
         }
 
         animator = GetComponent<Animator>();
+        
     }
 
     private void UpdateStartLocation(Scene _, LoadSceneMode __)
