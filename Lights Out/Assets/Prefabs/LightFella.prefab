@@ -275,7 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: -25
   pulseSpeed: 3
-  pulseAmount: 0.5
+  pulseAmount: 0.35
   pulseOffset: 1
 --- !u!1 &4086346958174602722
 GameObject:
@@ -331,8 +331,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: -25
   pulseSpeed: 3
-  pulseAmount: 0.5
-  pulseOffset: 0.75
+  pulseAmount: 0.35
+  pulseOffset: 0.5
 --- !u!1001 &902899213509092630
 PrefabInstance:
   m_ObjectHideFlags: 0
