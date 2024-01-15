@@ -276,7 +276,7 @@ MonoBehaviour:
   rotationSpeed: -25
   pulseSpeed: 3
   pulseAmount: 0.35
-  pulseOffset: 1
+  pulseOffset: 0
 --- !u!1 &4086346958174602722
 GameObject:
   m_ObjectHideFlags: 0
