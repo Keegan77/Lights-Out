@@ -1,7 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,13 +14,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 groundedBoxPosition;
     public LayerMask whatIsGround;
 
-    [Header("Jump")]
-    private bool isJumping;
-
     [Header("fall physics")]
     public float fallMultiplier;
     public float lowJumpMultiplier;
-
     public float maxFallingSpeed = -30;
     
     public bool isMoving;
@@ -87,9 +80,7 @@ public class PlayerController : MonoBehaviour
                                                 transform.localScale.y, 
                                                 transform.localScale.z);
         }
-        
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("MovingPlatform"))

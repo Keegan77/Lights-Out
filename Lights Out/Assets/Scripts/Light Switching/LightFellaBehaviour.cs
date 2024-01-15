@@ -6,10 +6,9 @@ using UnityEngine.SceneManagement;
 public class LightFellaBehaviour : MonoBehaviour
 {
     public static LightFellaBehaviour Instance;
-    [SerializeField] private Animator animator;
+    [SerializeField] private Animator animator; 
+    [SerializeField] AudioSource lightSwitchSound;
     private Transform nextLocation;
-    private Transform[] locationQueue;
-    
     public delegate void LightFellaTransportRequest(Transform newLocation);
     public LightFellaTransportRequest TransportLightFella; // not declared as event because we want to invoke it from
                                                            // other scripts
@@ -26,7 +25,6 @@ public class LightFellaBehaviour : MonoBehaviour
         }
 
         animator = GetComponent<Animator>();
-        
     }
 
     private void UpdateStartLocation(Scene _, LoadSceneMode __)
@@ -37,19 +35,28 @@ public class LightFellaBehaviour : MonoBehaviour
     private void OnEnable()
     {
         TimePhaseManager.StartFellaAnimation += StartAnimation;
-        TransportLightFella += MoveLightFella;
         SceneManager.sceneLoaded += UpdateStartLocation;
+        TimePhaseManager.OnPhaseChanged += PlayLightSwitchSound;
+        
+        TransportLightFella += MoveLightFella;
     } 
     private void OnDisable()  
     {
         TimePhaseManager.StartFellaAnimation -= StartAnimation;
-        TransportLightFella -= MoveLightFella;
         SceneManager.sceneLoaded -= UpdateStartLocation;
+        TimePhaseManager.OnPhaseChanged -= PlayLightSwitchSound;
+        
+        TransportLightFella -= MoveLightFella;
     }
 
     private void MoveLightFella(Transform location)
     {
         transform.position = location.position;
+    }
+    
+    private void PlayLightSwitchSound()
+    {
+        lightSwitchSound.Play();
     }
 
     private void StartAnimation()
