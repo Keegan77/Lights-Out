@@ -150,8 +150,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c2bd2b873b5b5e64bbecd6a0a098d423, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: 68f1ac62eb862da4fad2fea94b06f87d, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3656,7 +3656,7 @@ MonoBehaviour:
   rotationSpeed: -25
   pulseSpeed: 3
   pulseAmount: 0.35
-  pulseOffset: 1
+  pulseOffset: 0
 --- !u!4 &7535352911268224640
 Transform:
   m_ObjectHideFlags: 0
