@@ -184,6 +184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhitePlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 4254105127386670242, guid: a1d9987c6e8b9234c8589e0f563b69d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.67
+      objectReference: {fileID: 0}
     - target: {fileID: 8506729770508126497, guid: a1d9987c6e8b9234c8589e0f563b69d2, type: 3}
       propertyPath: m_TagString
       value: Untagged
