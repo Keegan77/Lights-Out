@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,35 +7,22 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpForce;
     private float moveInput;
-    public Vector3 lightFellaTransport;
-    public AudioSource jump;
-    public AudioSource diedSound;
+    public AudioSource jumpSound;
 
-    [Header("Layer Mask")]
-    private bool isGrounded;
-    public Transform feetPos;
-    public float checkRadius;
+    [Header("Ground Check")]
+    public Vector2 groundedBoxSize;
+    private Vector2 groundedBoxPosition;
     public LayerMask whatIsGround;
-
-    [Header("Jump")]
-    private float jumpTimeCounter;
-    public float jumpTime;
-    private bool isJumping;
 
     [Header("fall physics")]
     public float fallMultiplier;
     public float lowJumpMultiplier;
-
-    public float maxYVelocity = -50;
-
+    public float maxFallingSpeed = -30;
+    
     public bool isMoving;
     public bool onMovingPlat;
     Animator animator;
-    GameObject GameManagerObj;
-    GameManager gameManager;
-    GameObject LightFella;
-
-    //Gets Rigidbody component
+    private GameObject LightFella;
 
     private void Awake()
     {
@@ -47,15 +31,13 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        GameManagerObj = GameObject.FindGameObjectWithTag("gamemanager");
-        gameManager = GameManagerObj.GetComponent<GameManager>();
         LightFella = GameObject.FindGameObjectWithTag("LightFella");
     }
 
-    //Moves player on x axis
-
     void FixedUpdate()
     {
+        rb.velocity = Vector2.Max(rb.velocity, new Vector2(rb.velocity.x, maxFallingSpeed));
+        
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         if (moveInput != 0)
@@ -64,101 +46,48 @@ public class PlayerController : MonoBehaviour
         }
         else isMoving = false;
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("LevelComplete"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            Debug.Log("Complete");
-        }
-
-        if (other.CompareTag("DeathPlane") || other.CompareTag("Spikes"))
-        {
-            gameManager.playerDied = true;
-            diedSound.Play();
-            Destroy(gameObject);
-        }
-        if (other.CompareTag("MoveLightFella"))
-        {
-            LightFella.transform.position = lightFellaTransport;
-        }
-
-    }
-
+    
     void Update()
     {
+        groundedBoxPosition = new Vector2(transform.position.x, transform.position.y - (transform.localScale.y / 2));
 
-        if (rb.velocity.y < maxYVelocity)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, maxYVelocity);
-        }
-
-
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
-
-        if (moveInput > 0)
-        {
-            transform.localScale = new Vector3(1.248608f, 1.249893f, 1.248608f);
-        }
-        else if (moveInput < 0)
-        {
-            transform.localScale = new Vector3(-1.248608f, 1.248608f, 1.248608f);
-        }
-
-        //cool jump fall
-
+        OrientPlayer();
+        
+        // Increases fall gravity speed
         if (rb.velocity.y < 0)
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            rb.velocity += Vector2.up * (Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime);
         }
 
-        if (rb.velocity.y > 0)
+        if (CheckGround() && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Z)))
         {
-            if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Z))
-            {
-                rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-            }
-
-        }
-        //fixed double jump bug
-        if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.Z))
-        {
-            isJumping = false;
-        }
-
-        //lets player jump
-
-        if (isGrounded == true && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Z)) && isJumping == false)
-        {
-            isJumping = true;
-            /////////////////////////////////////////////////////////
-            jump.Play();
-            jumpTimeCounter = jumpTime;
+            jumpSound.Play();
             rb.velocity = Vector2.up * jumpForce;
-        }
-        //makes you jump higher when you hold down space
-        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Z)) && isJumping == true)
-        {
-            if (jumpTimeCounter > 0)
-            {
-                //rb.velocity = Vector2.up * jumpForce;
-                //jumpTimeCounter -= Time.deltaTime;
-            }
-            else
-            {
-                isJumping = false;
-            }
         }
         animator.SetBool("Moving", isMoving);
     }
 
+    private bool CheckGround()
+    {
+        return Physics2D.OverlapBox(groundedBoxPosition, groundedBoxSize, 0, whatIsGround);
+    }
+
+    private void OrientPlayer()
+    {
+        if (moveInput != 0)
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * moveInput, 
+                                                transform.localScale.y, 
+                                                transform.localScale.z);
+        }
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("MovingPlatform"))
         {
             onMovingPlat = true;
         }
+
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -166,5 +95,12 @@ public class PlayerController : MonoBehaviour
         {
             onMovingPlat = false;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        //visualize grounded box
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - (transform.localScale.y / 2)), groundedBoxSize);
     }
 }

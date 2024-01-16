@@ -17,6 +17,8 @@ TagManager:
   - playerFinale
   - Music
   - MovingPlatform
+  - FellaStartLocation
+  - VerticalLines
   layers:
   - Default
   - TransparentFX
@@ -25,8 +27,8 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
+  - Post Processing
+  - Platform
   - 
   - 
   - 
@@ -51,12 +53,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
-  - name: front
+  - name: Behind
     uniqueID: 933527345
     locked: 0
-  - name: frontfront
-    uniqueID: 3376625583
+  - name: Default
+    uniqueID: 0
     locked: 0

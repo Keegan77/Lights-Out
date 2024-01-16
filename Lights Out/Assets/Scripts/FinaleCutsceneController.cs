@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Light_Switching;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,9 +17,21 @@ public class FinaleCutsceneController : MonoBehaviour
     float stopBarrierTimer;
     float timerEnd = 5.917f;
     float timer;
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
+        TimePhaseManager.Instance.PauseTimephase(true);
+        
+        Destroy(FindObjectOfType<DontDestroyMusic>()?.gameObject);
+        
+        // Gets rid of music for finale scene. In the future,
+        // "DontDestroyMusic" will be changed to a class called
+        // "MusicManager" which will have a method called "StopMusic"
+        // or something like that. This class will be a singleton,
+        // and can be accessed from it's static Instance variable.
+        
+        Destroy(FindObjectOfType<LightFellaBehaviour>()?.gameObject); //Destroys the light fella so he doesn't interfere with the cutscene                                               
+
         
     }
 
@@ -50,7 +64,6 @@ public class FinaleCutsceneController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger");
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(collision.gameObject);

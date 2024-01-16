@@ -15,15 +15,9 @@ public class MenuManager : MonoBehaviour
     float timer;
     bool animEnded;
     bool lightPressed;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        
         if (Input.GetKeyDown(KeyCode.S))
         {
             lightPressed = true;
